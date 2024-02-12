@@ -1,0 +1,26 @@
+﻿<Window x:Class="rchtest1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rchtest1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+        
+        <Button Width="70" Height="20" Click="City" Content="Города" Margin="10,135,720,295"></Button>
+
+        <Button Width="70" Height="20" Click="Employee" Content="Работники" Margin="10,110,720,320"></Button>
+
+        <Button Width="70" Height="20" Click="Company" Content="Компании" Margin="10,85,720,345"></Button>
+
+        <Button Width="70" Height="20" Click="Position" Content="Должность" Margin="10,60,720,370"></Button>
+
+        <Button Width="70" Height="20" Click="Transport" Content="Логистика" Margin="10,35,720,395"></Button>
+
+        <Button Width="70" Height="20" Click="TypeCargo" Content="Тип заказа" Margin="10,10,720,420"></Button>
+        
+        
+        <Frame x:Name="MainFrame" Width="700" Navigated="FrameNavigated" Margin="174,0,26,0"/>
+    </Grid>
+</Window>

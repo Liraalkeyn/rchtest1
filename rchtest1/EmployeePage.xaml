@@ -1,0 +1,45 @@
+﻿<Page x:Class="rchtest1.EmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:rchtest1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployeePage" Width="700">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <ListView x:Name="ListView"
+                  Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Run Text="{Binding Name}"/>
+                    <Run Text="{Binding LastName}"/>
+                    <Run Text="{Binding Patronimyc}"/>
+                    <Run Text="{Binding TelephoneNumber}"/>
+                    <Run Text="{Binding EMail}"/>
+                    <Run Text="{Binding Position.PositionName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="Employee"
+        Content="Выбрать" 
+        Grid.Row="2"
+        Click="Employee_Click" />
+
+        <Button x:Name="Add"
+        Content="Добавить"
+        Grid.Row="3"
+        Click="Add_Click" />
+                        
+    </Grid>
+</Page>
